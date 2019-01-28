@@ -17,11 +17,24 @@ switch (operation) {
         concertThis(name);
         break;
     case "spotify-this-song":
-        name = process.argv[3].trim();
+        name = process.argv[3];
+        if (name) {
+            name = process.argv[3].trim();
+        }
+        else {
+            name = "The Sign";
+        }
+        console.log("Name in Switch case = " + name);
         spotifyThisSong(name);
         break;
     case "movie-this":
-        name = process.argv[3].trim();
+        name = process.argv[3];
+        if (name) {
+            name = process.argv[3].trim();
+        }
+        else {
+            name = "Mr. Nobody.";
+        }
         movieThis(name)
         break;
     case "do-what-it-says":
